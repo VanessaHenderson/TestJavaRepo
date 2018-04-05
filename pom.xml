@@ -36,6 +36,26 @@
           <artifactId>lbfgs4j</artifactId>
           <version>0.2.1</version>
         </dependency>
-        
     </dependencies>
+    <build>
+    <plugins>
+        <plugin>
+            <groupId>com.srcclr</groupId>
+            <artifactId>srcclr-maven-plugin</artifactId>
+            <version>2.3.16</version>
+            <configuration>
+                <!--- Add configuration details here-->
+           </configuration>
+           <executions>
+               <execution>
+                   <id>srcclr-scan</id>
+                   <phase>verify</phase>
+                   <goals>
+                       <goal>scan</goal>
+                   </goals>
+               </execution>
+          </executions>
+        </plugin>
+    </plugins>
+</build>
 </project>
